@@ -143,7 +143,7 @@ new GenericTooltip();
 tooltip-plugin/
 ├── tooltip.css       # Scoped CSS
 ├── tooltip.js        # Standalone JS module
-└── index.html        # Sample demo
+└── demo.html        # Sample demo
 ```
 
 ---
