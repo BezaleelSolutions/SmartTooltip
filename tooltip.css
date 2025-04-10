@@ -1,0 +1,66 @@
+ .generic-tooltip {
+      position: absolute;
+      background-color: #f0f0f0;
+      color: #333;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-family: sans-serif;
+      z-index: 9999;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(0);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      min-width: 100px;
+      max-width: 80vw;
+      max-height: 80vh;
+      height: auto;
+      overflow: hidden;
+    }
+
+    .generic-tooltip.show {
+      opacity: 1;
+      transform: translateY(-6px);
+      pointer-events: auto;
+    }
+
+    .generic-tooltip-html {
+      resize: both;
+      overflow: auto;
+    }
+
+    .generic-tooltip img,
+    .generic-tooltip iframe,
+    .generic-tooltip video {
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+      object-fit: contain;
+    }
+
+    .generic-tooltip iframe,
+    .generic-tooltip img,
+    .generic-tooltip video {
+      pointer-events: all;
+    }
+
+    .generic-tooltip.typing::after {
+      content: '|';
+      animation: blink 1s infinite;
+      margin-left: 2px;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    /* Simple spacing for layout */
+    body {
+      padding: 2rem;
+    }
+
+    input, textarea {
+      margin-bottom: 1rem;
+    }
